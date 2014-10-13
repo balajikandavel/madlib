@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html ng-app="">
+<html ng-app="madlib">
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
-
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-	<title>ngMadlibs</title>
+<script src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/MadlibController.js"></script>
+<title>ngMadlibs</title>
 </head>
 <body class="body" >
 <header class="header">
@@ -14,8 +14,8 @@
 			<h1 class="h1">Automate This!</h1>
 		</div>
 </header>
-
-<div class="inputWords">
+<div ng-controller="madlibController">
+<div class="inputWords" >
 	<h3>Provide the Following words:</h3>
 	<input type="text" ng-model="female_name" placeholder="female name"/>
 
@@ -41,7 +41,7 @@
 <p>What a great decision! With her new skills, {{female_name}} built a(n) {{adjective}} robot named {{obnoxiuous_celbertity}} that not only loved {{dirty_task}} but did it {{huge_number}} faster. </p>
 
 </div>
-
+</div>
 </body>
 </html>
 
