@@ -1,0 +1,61 @@
+.body{
+	width: 65%;
+	height: 100%;
+	border: solid;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+}
+
+
+.header
+{
+	height: 10%
+	display:inline;
+	border-bottom: solid;
+	line-height: 10%;
+}
+
+.headerPortion
+{
+ display: inline;
+ text-align: center;
+ padding-left: 15%;
+ 
+}
+
+.inputWords
+{
+	height: 45%
+	background-color:#f2d482;
+	border-bottom: solid;
+	padding:3%;
+	line-height:150%;
+	display: block; 
+	
+
+}
+
+.midlabs
+{
+	height: 45%
+    color:#d2f0f2;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding: 2%;
+}
+
+.madlibimage {
+   width:35%; 
+   height:50%;
+}
+
+.check{
+text-decoration: ;
+font-style:
+
+}
+
+h1{
+font-size: 350%;	
+}
