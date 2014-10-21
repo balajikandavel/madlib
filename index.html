@@ -14,32 +14,40 @@
 			<h1 class="h1">Automate This!</h1>
 		</div>
 </header>
-<div ng-controller="madlibController">
-<div class="inputWords" >
-	<h3>Provide the Following words:</h3>
-	<input type="text" ng-model="female_name" placeholder="female name"/>
+<div ng-controller="madlibController" >
 
-	<input type="text" ng-model="job_title" placeholder="job title"/>
+<form  name="madlibForm" ng-show="checkSomething()" ng-submit="ShowAlternate(madlibForm.$valid)" novalidate>
+	<div class="inputWords" >
+		<h3>Provide the Following words:</h3>
+		
+		<input type="text" ng-model="female_name" placeholder="female name" required/>
 
-	<input type="text" ng-model="tedious_task" placeholder="tedious task"/>
+		<input type="text" ng-model="job_title" placeholder="job title" required/>
 
-	<input type="text" ng-model="dirty_task" placeholder="dirty_task"/>
+		<input type="text" ng-model="tedious_task" placeholder="tedious task" required/>
 
-	<input type="text" ng-model="celebrity" placeholder="celebrity"/>
+		<input type="text" ng-model="dirty_task" placeholder="dirty_task" required/>
 
-	<input type="text" ng-model="useless_skill" placeholder="useless_skill"/>
+		<input type="text" ng-model="celebrity" placeholder="celebrity" required/>
 
-	<input type="text" ng-model="adjective" placeholder="adjective"/>
+		<input type="text" ng-model="useless_skill" placeholder="useless_skill" required/>
 
-	<input type="text" ng-model="obnoxiuous_celbertity" placeholder="obnoxiuous_celbertity"/>
+		<input type="text" ng-model="adjective" placeholder="adjective" required/>
 
-	<input type="text" ng-model="huge_number" placeholder="huge_number"/>
-</div>
-<div class="midlabs">
+		<input type="text" ng-model="obnoxiuous_celbertity" placeholder="obnoxiuous_celbertity" required/>
+
+		<input type="number" ng-model="huge_number" placeholder="huge_number" required/><span ng-show="madlibForm.huge_number.$invalid && submitted">Please enter a valid number</span>
+
+		<input type="submit" value="Generate My MadLib"  class="madlibButton" >
+	</div>
+</form>
+
+<div class="midlabs" ng-show="!checkSomething()">
 	<span class="check">{{female_name}}</span> was a {{job_title}} who loved technology. Although she loved parts of her job, she absolutely hated  {{tedious_task}} and {{dirty_task}}. So, {{female_name}} met with her life mentor {{celebrity}} who told her to learn how to {{useless_skill}} with Thinkful. Thinkful didn't offer a course on {{useless_skill}} so she studied programming instead. 
  
-<p>What a great decision! With her new skills, {{female_name}} built a(n) {{adjective}} robot named {{obnoxiuous_celbertity}} that not only loved {{dirty_task}} but did it {{huge_number}} faster. </p>
-
+<p>What a great decision! With her new skills, {{female_name}} built a(n) {{adjective}} robot 
+named {{obnoxiuous_celbertity}} that not only loved {{dirty_task}} but did it {{huge_number}} faster.</p>
+<input type="submit" value="Start Over" ng-click="clearData(true)" class="madlibButton">
 </div>
 </div>
 </body>
